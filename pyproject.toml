@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-product-analytics"
+version = "0.1.0"
+description = "Independent end-to-end e-commerce product analytics project"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.1,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel>=6,<7",
+    "jupyterlab>=4,<5",
+    "pytest>=8,<9",
+    "ruff>=0.6,<1",
+    "urllib3<2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
