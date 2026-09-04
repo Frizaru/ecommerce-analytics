@@ -33,3 +33,8 @@ data/processed/*
 # Generated reports
 reports/*
 !reports/.gitkeep
+
+# Local agent instructions and internal workflow artifacts
+AGENTS.md
+prompts/WORKFLOW_PROMPTS.md
+docs/superpowers/
